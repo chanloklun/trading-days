@@ -13,7 +13,7 @@ is.
 To run the program, you'll need to find the constant THIS-YEAR and change
 it to the year you want.  Next, find out the holidays of the stock exchange
 for that year and populate the Clojure set named HOLIDAYS.  Finally, just
-run the program with `clj src/trading_days.clj` and look for the output file 
+run the program with `clj src/main.clj` and look for the output file 
 `output.txt` in the same directory you run the program.
 
 Enjoy!
