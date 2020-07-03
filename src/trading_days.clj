@@ -26,10 +26,13 @@
 (defn trading-day? [day] (and (not (holiday? day))
                               (not (weekend? day))))
 
+; Given a year, returns a function that would return a sequence of
+; days within that year.  This way I don't need to tie the logic of
+; generating the day sequence to a particular year.
 (defn days-in-year-gen [year]
   (fn days-in-year
     ([] (days-in-year (LocalDate/of year 1 1)))
-    ([day] (if (= (.getYear day) year)
+    ([day] (if (= (.getYear day) year)  ; have we crossed into next year yet?
              (lazy-seq (cons day (days-in-year (.plusDays day 1))))))))
 
 (def days-in-this-year ((days-in-year-gen THIS-YEAR)))
