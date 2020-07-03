@@ -1,4 +1,4 @@
-# Trading Day Generator
+# Trading Days Generator
 
 I keep an Excel file that tracks the daily closing value of S&P 500.  The
 spreadsheet has several columns and one of them is date.  I usually pre-
