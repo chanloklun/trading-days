@@ -7,16 +7,15 @@
 ; Change the value of THIS-YEAR to the year you want,
 ; then fill in the HOLIDAYS set with exchange holidays
 ; for the year you want
-(def THIS-YEAR 2021)
-(def HOLIDAYS #{(LocalDate/of 2021 1 1)
-                (LocalDate/of 2021 1 18)
-                (LocalDate/of 2021 2 15)
-                (LocalDate/of 2021 4 2)
-                (LocalDate/of 2021 5 31)
-                (LocalDate/of 2021 7 5)
-                (LocalDate/of 2021 9 6)
-                (LocalDate/of 2021 11 25)
-                (LocalDate/of 2021 12 24)})
+(def THIS-YEAR 2022)
+(def HOLIDAYS #{(LocalDate/of 2022 1 17)
+                (LocalDate/of 2022 2 21)
+                (LocalDate/of 2022 4 15)
+                (LocalDate/of 2022 5 30)
+                (LocalDate/of 2022 7 4)
+                (LocalDate/of 2022 9 5)
+                (LocalDate/of 2022 11 24)
+                (LocalDate/of 2022 12 26)})
 
 (defn holiday? [day] (contains? HOLIDAYS day))
 (defn weekend? [day]
