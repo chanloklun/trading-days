@@ -1,4 +1,4 @@
-; Clojure program to generate a output.txt plain text file
+; Clojure program to generate an output.txt plain text file
 ; having a trading day on each line.
 ;
 
@@ -7,15 +7,17 @@
 ; Change the value of THIS-YEAR to the year you want,
 ; then fill in the HOLIDAYS set with exchange holidays
 ; for the year you want
-(def THIS-YEAR 2022)
-(def HOLIDAYS #{(LocalDate/of 2022 1 17)
-                (LocalDate/of 2022 2 21)
-                (LocalDate/of 2022 4 15)
-                (LocalDate/of 2022 5 30)
-                (LocalDate/of 2022 7 4)
-                (LocalDate/of 2022 9 5)
-                (LocalDate/of 2022 11 24)
-                (LocalDate/of 2022 12 26)})
+(def THIS-YEAR 2024)
+(def HOLIDAYS #{(LocalDate/of 2024 1 1)
+                (LocalDate/of 2024 1 15)
+                (LocalDate/of 2024 2 19)
+                (LocalDate/of 2024 3 29)
+                (LocalDate/of 2024 5 27)
+                (LocalDate/of 2024 6 19)
+                (LocalDate/of 2024 7 4)
+                (LocalDate/of 2024 9 2)
+                (LocalDate/of 2024 11 28)
+                (LocalDate/of 2024 12 25)})
 
 (defn holiday? [day] (contains? HOLIDAYS day))
 (defn weekend? [day]
